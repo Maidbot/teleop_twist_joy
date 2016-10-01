@@ -83,9 +83,12 @@ TeleopTwistJoy::TeleopTwistJoy(ros::NodeHandle* nh, ros::NodeHandle* nh_param)
   }
   else
   {
-    nh_param->param<int>("axis_linear", pimpl_->axis_linear_map["x"], 1);
-    nh_param->param<double>("scale_linear", pimpl_->scale_linear_map["x"], 0.5);
+    nh_param->param<int>("axis_linear_x", pimpl_->axis_linear_map["x"], 1);
+    nh_param->param<double>("scale_linear_x", pimpl_->scale_linear_map["x"], 0.5);
     nh_param->param<double>("scale_linear_turbo", pimpl_->scale_linear_turbo_map["x"], 1.0);
+
+    nh_param->param<int>("axis_linear_y", pimpl_->axis_linear_map["y"], 1);
+    nh_param->param<double>("scale_linear_y", pimpl_->scale_linear_map["y"], 0.5);
   }
 
   if (nh_param->getParam("axis_angular", pimpl_->axis_angular_map))
@@ -96,7 +99,7 @@ TeleopTwistJoy::TeleopTwistJoy(ros::NodeHandle* nh, ros::NodeHandle* nh_param)
   }
   else
   {
-    nh_param->param<int>("axis_angular", pimpl_->axis_angular_map["yaw"], 0);
+    nh_param->param<int>("axis_angular", pimpl_->axis_angular_map["yaw"], 3);
     nh_param->param<double>("scale_angular", pimpl_->scale_angular_map["yaw"], 0.5);
     nh_param->param<double>("scale_angular_turbo",
         pimpl_->scale_angular_turbo_map["yaw"], pimpl_->scale_angular_map["yaw"]);
