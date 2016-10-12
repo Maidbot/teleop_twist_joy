@@ -1,10 +1,10 @@
 axis_linear_x: 1  # forward-backward axis Left thumb stick vertical
 scale_linear_x: 0.5
-axis_linear_y: 3  # forward-backward axis Left thumb stick vertical
+axis_linear_y: 0  # forward-backward axis Left thumb stick vertical
 scale_linear_y: 0.5
 scale_linear_turbo: 1.5
 
-axis_angular: 0  # Right thumb stick horizontal
+axis_angular: 3  # Right thumb stick horizontal
 scale_angular: 2.0
 
 enable_button: 5  # RB  button
